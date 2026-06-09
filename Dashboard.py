@@ -15,7 +15,8 @@ def SymptomsAi(Symptoms):
   }
   response=requests.post(api_url,headers=headers,json=payload)
   result=response.json()
-  return result["choices"][0]["message"]["content"]
+  if "choices" in result:
+    return result["choices"][0]["message"]["content"]
 Symptoms=st.chat_input("Ask Doctor")
 answer=SymptomsAi(Symptoms)
 if Symptoms:
