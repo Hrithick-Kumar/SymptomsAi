@@ -17,12 +17,12 @@ def SymptomsAi(Symptoms):
   result=response.json()
   return result["choices"][0]["message"]["content"]
 Symptoms=st.chat_input("Ask Doctor")
+answer=SymptomsAi(Symptoms)
 if Symptoms:
   with st.chat_message("User"):
     st.write(Symptoms)
   with st.spinner("Analyzing"):
-    with st.chat_message("Ai Reply"):
-      answer=SymptomsAi(Symptoms)
+    with st.chat_message("Advice"):
       st.markdown(answer)
 
 
