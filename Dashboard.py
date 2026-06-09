@@ -23,7 +23,7 @@ if Symptoms:
     st.write(Symptoms)
   with st.spinner("Analyzing"):
     answer=SymptomsAi(Symptoms)
-    with st.chat_message("Advice"):
+    with st.chat_message("Assistant"):
       st.markdown(answer)
 
 
