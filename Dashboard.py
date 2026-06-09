@@ -1,3 +1,3 @@
 import streamlit as st
-st.write("Symptoms Ai")
+st.header("Symptoms Ai")
 
