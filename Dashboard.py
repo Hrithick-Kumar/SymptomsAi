@@ -20,9 +20,9 @@ Symptoms=st.chat_input("Ask Doctor")
 if Symptoms:
   with st.chat_message("User"):
     st.write(Symptoms)
-with st.spinner("Analyzing"):
-  with st.chat_message("Ai Reply"):
-    answer=SymptomsAi(Symptoms)
-    st.markdown(answer)
+  with st.spinner("Analyzing"):
+    with st.chat_message("Ai Reply"):
+      answer=SymptomsAi(Symptoms)
+      st.markdown(answer)
 
 
