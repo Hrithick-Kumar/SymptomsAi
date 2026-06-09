@@ -5,7 +5,7 @@ def SymptomsAi(Symptoms):
   api_url="https://openrouter.ai/api/v1/chat/completions"
   api_key=st.secrets["SymptomsAi"]
   headers={
-    "Authorization":f"Bearer{api_key}",
+    "Authorization":f"Bearer {api_key}",
     "Content-Type":"application/json"
   }
   payload={
