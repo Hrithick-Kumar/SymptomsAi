@@ -18,11 +18,11 @@ def SymptomsAi(Symptoms):
   if "choices" in result:
     return result["choices"][0]["message"]["content"]
 Symptoms=st.chat_input("Ask Doctor")
-answer=SymptomsAi(Symptoms)
 if Symptoms:
   with st.chat_message("User"):
     st.write(Symptoms)
   with st.spinner("Analyzing"):
+    answer=SymptomsAi(Symptoms)
     with st.chat_message("Advice"):
       st.markdown(answer)
 
