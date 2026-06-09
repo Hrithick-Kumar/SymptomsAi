@@ -17,8 +17,7 @@ def SymptomsAi(Symptoms):
   result=response.json()
   return result["choices"][0]["message"]["content"]
 Symptoms=st.chat_input("Ask Doctor")
-if Symptoms!="":
-  st.spinner("Analyzing")
+with st.spinner("Analyzing"):
   answer=SymptomsAi(Symptoms)
   st.markdown(answer)
 
