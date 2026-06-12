@@ -9,7 +9,7 @@ def SymptomsAi(Symptoms):
     "Content-Type":"application/json"
   }
   payload={
-    "model":"openrouter/free",
+    "model":"google/gemma-4-31b-it",
     "messages":[{"role":"system","content":"you are an expert general doctor.you can analyze symptoms and show possibilities"},
                 {"role":"user","content":Symptoms}]
   }
